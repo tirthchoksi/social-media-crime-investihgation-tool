@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Forensic Tool</title>
+    <style>
+        body { background-color: #121212; color: #00ff41; font-family: 'Courier New', monospace; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; border-bottom: 2px solid #00ff41; padding-bottom: 10px; }
+        .card { border: 1px solid #333; padding: 20px; margin-bottom: 20px; background-color: #1e1e1e; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 10px; margin: 10px 0; background: #000; color: #fff; border: 1px solid #00ff41; }
+        button { background-color: #00ff41; color: #000; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; width: 100%; }
+        button:hover { background-color: #00cc33; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[ CYBER FORENSIC SUITE ]</h1>
+        
+        <div class="card">
+            <h2>Instagram Forensics</h2>
+            <form action="/analyze_profile" method="post">
+                <input type="text" name="profile_link" placeholder="Paste Profile Link (e.g. instagram.com/username)" required>
+                <button type="submit">Scan Profile & Comments</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>X (Twitter) Forensics</h2>
+            <form action="/analyze_twitter" method="post">
+                <input type="text" name="twitter_handle" placeholder="Enter Handle (e.g. elonmusk)" required>
+                <button type="submit">Scan Tweets</button>
+            </form>
+        </div>
+        <div class="card">
+        <h2>Facebook Forensics</h2>
+        <form action="/analyze_facebook" method="post">
+        <input type="text" name="facebook_handle" placeholder="Enter Page Name (e.g. teslamotors)" required>
+        <button type="submit">Scan Facebook Page</button>
+        </form>
+        </div>
+
+        <div class="card">
+            <h2>Deep Image Analysis (Metadata + OCR)</h2>
+            <form action="/analyze_image" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Upload Evidence</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
